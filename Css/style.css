@@ -14,21 +14,29 @@ header {
   background-color: orange;
   color: wheat;
 }
-nav ul {
+.top-nav ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   font-size: 1.3em;
 }
-nav li {
+.top-nav li {
   padding: 10px;
   font-weight: bold;
   text-transform: uppercase;
 }
-nav ul li a {
+.top-nav ul li a {
   color: wheat;
   text-decoration: none;
+}
+
+.span-style {
+  margin: 0px auto auto 0px;
+  font-size: 1.2em;
+  color: grey;
+  width: 50%;
+  padding: 0px;
 }
 h1 {
   text-align: center;
@@ -44,7 +52,7 @@ h2 {
 p {
   text-align: center;
   color: grey;
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 
 footer {
@@ -54,7 +62,7 @@ footer {
   padding: 20px 20px;
   
 }
-footer p,footer span {
+footer p {
   color: black;
   font:400
 }
@@ -142,17 +150,30 @@ a:hover {
   margin: 25px auto;
 }
 
-
+@media only screen and (min-width:320px) {
+  .bottom-nav li a{
+    color: grey;
+    margin: 0px auto auto 0px;
+    font-size: 1em;
+  }
+  .bottom-nav {
+    display: none;
+  }
+}
 
 /* Tablet Media Query */
 @media only screen and (min-width: 768px) {
-  
+  #backTop {
+    display: none;
+  }
+  .bottom-nav {
+    display: flex;
+    font-size: 1.3em;
+  }
   nav ul {
     flex-direction: row;
   }
-  p {
-    font-size: 1.4em;
-  }
+
   h3 {
     font-size: 1.6em;
   }
@@ -180,7 +201,7 @@ a:hover {
     flex-wrap: wrap;
   }
   .project {
-    max-width: 47%;
+    max-width: 50%;
     margin: auto;
   }
 }
@@ -189,20 +210,23 @@ a:hover {
   h1 {
     margin: auto auto auto 0px;
   }
-  nav {
+  .top-nav {
     display: flex;
     width: 90%;
     margin: auto auto 25px  auto;
+    
   }
-  nav ul {
+  .top-nav ul {
    margin: auto 0px auto auto;
+   flex-direction: row;
   }
-  nav li {
+  .top-nav li {
     font-size: 1.5em
   }
   
+  
   .project {
-    max-width: 32%;
+    max-width: 33%;
     margin-bottom: 50px;
   }
   .contact {
@@ -211,10 +235,13 @@ a:hover {
   #blue {
     font-size: 1.8em;
   }
+  .span-style {
+    font-size: 1.5em;
+  }
 }
 
 @media only screen and (min-width: 1400px) {
-  nav li {
+  .top-nav li {
     font-size: 1.5em
   }
  
