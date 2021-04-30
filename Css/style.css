@@ -34,7 +34,6 @@ header {
   margin: 0px auto auto 0px;
   font-size: 1.2em;
   color: grey;
-  width: 50%;
   padding: 0px;
 }
 h1 {
@@ -142,16 +141,17 @@ a:hover {
   margin: 25px auto;
 }
 
-@media only screen and (min-width: 320px) {
-  .bottom-nav li a {
-    color: grey;
-    margin: 0px auto auto 0px;
-    font-size: 1em;
-  }
-  .bottom-nav {
-    display: none;
-  }
+/* Bottom Navigation */
+.bottom-nav li a {
+  color: grey;
+  margin: 0px auto auto 0px;
+  font-size: 1em;
 }
+.bottom-nav {
+  display: none;
+}
+
+
 
 /* Tablet Media Query */
 @media only screen and (min-width: 768px) {
@@ -193,6 +193,10 @@ a:hover {
   }
   .project {
     max-width: 50%;
+  }
+
+  .top-nav ul {
+    flex-direction: row;
   }
 }
 
